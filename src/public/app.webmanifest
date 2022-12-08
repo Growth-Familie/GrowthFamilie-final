@@ -6,7 +6,7 @@
   "description": "Best Parenting For Your Family",
   "display": "standalone",
   "background_color": "#FFFFFF",
-  "theme_color": "linear-gradient(to right, #fdca98, #e6a2b6, #fdca98)",
+  "theme_color": "#72459B",
   "icons": [
     {
       "src": "/icons/72x72.png",
