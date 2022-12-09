@@ -47,14 +47,14 @@ const BudgetingUtils = {
           <td>
             <button
               id="editButton"
-              class="btn btn-sm btn-secondary btn-action"
+              class="btn btn-sm btn-secondary btn-action m-1"
               product-id="${product.id}"
               title="Edit"
               type="button"
             >${feather.icons.edit.toSvg()}</button>
             <button
               id="deleteButton"
-              class="btn btn-sm btn-danger btn-action"
+              class="btn btn-sm btn-danger btn-action m-1"
               product-id="${product.id}"
               title="Delete"
               type="button"

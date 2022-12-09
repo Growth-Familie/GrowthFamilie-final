@@ -38,5 +38,8 @@
     "regenerator-runtime": "^0.13.11",
     "sweetalert": "^2.1.2",
     "workbox-window": "^6.5.4"
+  },
+  "engines": {
+    "node": "16.17.0"
   }
 }

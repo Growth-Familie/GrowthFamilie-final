@@ -23,7 +23,7 @@ const cardDetail = {
     </div>
 
     <div class="budgeting-wrapper container-fluid py-5 mt-5 text-center">
-      <h3 class="text-center mb-5"><u>What you need for your children?</u></h3>
+      <h3 class="text-center mb-5"><u>What's needed for your children?</u></h3>
       <a href="#/budgeting-children" class="btn category rounded-pill mt-4">Take A Look At Here!</a>
     </div>
     `;

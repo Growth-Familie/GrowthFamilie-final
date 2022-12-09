@@ -28,21 +28,21 @@ const ArticlesUtils = {
           <td>
             <button
               id="viewButton"
-              class="btn btn-sm btn-info text-white btn-action"
+              class="btn btn-sm btn-info text-white btn-action m-1"
               article-slug="${article.slug}"
               title="View"
               type="button"
             >${feather.icons.eye.toSvg()}</button>
             <button
               id="editButton"
-              class="btn btn-sm btn-secondary btn-action"
+              class="btn btn-sm btn-secondary btn-action m-1"
               article-id="${article.id}"
               title="Edit"
               type="button"
             >${feather.icons.edit.toSvg()}</button>
             <button
               id="deleteButton"
-              class="btn btn-sm btn-danger btn-action"
+              class="btn btn-sm btn-danger btn-action m-1"
               article-id="${article.id}"
               title="Delete"
               type="button"
