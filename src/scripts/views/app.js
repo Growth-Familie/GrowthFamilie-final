@@ -47,7 +47,7 @@ class App {
         await page.afterRender(user);
 
         LogoutInitiator.init({
-          button: document.querySelector('#logoutButton'),
+          button: document.querySelectorAll('#logoutButton'),
         });
       }
     } else {

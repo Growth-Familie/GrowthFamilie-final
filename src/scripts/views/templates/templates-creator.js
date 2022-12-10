@@ -69,7 +69,7 @@ const createUserAccountFormTemplate = () => {
           <div class="col-auto">
             <input type="text" id="usernameInput" class="form-control text-muted" aria-describedby="usernameHelpInline" disabled>
           </div>
-          <div class="col-auto mb-3 pt-0 mt-0">
+          <div class="mb-3 mt-0">
             <span id="usernameHelpInline" class="form-text text-danger">
               Untuk saat ini username tidak bisa diubah.
             </span>
@@ -287,30 +287,50 @@ const createBudgetingListTemplate = () => {
 
 const createDashboardTemplate = (user) => {
   return `
-    <header
-      class="navbar sticky-top bg-black flex-md-nowrap p-1"
+  <header
+  class="navbar navbar-expand-md sticky-top bg-black flex-md-nowrap top-0"
+>
+  <div class="container-fluid">
+    <a
+      class="navbar-brand dashboard-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white"
+      href="/"
     >
-      <a
-        class="navbar-brand dashboard-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white"
-        href="/"
-      >Growth Familie</a>
-      <div class="navbar-nav">
-        <div class="nav-item text-nowrap">
-          <button
-            class="btn btn-sm p-2 nav-link px-3 text-white d-flex align-items-center"
-            type="button"
-            id="logoutButton"
-          >
-            <span class="feather-icon text-white">
-              ${feather.icons['log-out'].toSvg()}
-            </span>
-            <span class="mx-2 text-white">
-              Sign out
-            </span>
-          </button>
-        </div>
+      Growth Familie
+    </a>
+    <div class="text-white position-absolute top-0 end-0 d-flex justify-content-between">
+    <p class="m-4 admin">Admin</p>
+    <img src="./images/avatar.svg" class="avatar m-2">
+    </div>
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse navbar-dashboard" id="navbarNavAltMarkup">
+      <div class="navbar-nav me-auto mb-2 mt-2 d-md-none d-lg-none">
+        <a class="nav-link text-white" href="#/dashboard">Articles</a>
+        <a
+          class="nav-link text-white"
+          href="#/dashboard/${user.username}/budgeting"
+        >Budgeting</a>
+        <a
+          class="nav-link text-white"
+          href="#/dashboard/${user.username}/account"
+        >Account</a>
       </div>
-    </header>
+      <button
+        class="btn btn-sm p-2 nav-link px-3 text-white d-flex align-items-center d-md-none d-lg-none"
+        type="button"
+        id="logoutButton"
+      >
+        <span class="feather-icon text-white">
+          ${feather.icons['log-out'].toSvg()}
+        </span>
+        <span class="mx-2 text-white">
+          Sign out
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
 
     <div class="container-fluid">
       <div class="row">
@@ -352,6 +372,18 @@ const createDashboardTemplate = (user) => {
                   My Account
                 </a>
               </li>
+              <button
+                class="btn btn-sm p-2 nav-link px-3 text-white d-flex align-items-center m-3"
+                 type="button"
+                 id="logoutButton"
+               >
+                <span class="feather-icon text-white">
+                  ${feather.icons['log-out'].toSvg()}
+                </span>
+               <span class="mx-2 text-white">
+                Sign out
+              </span>
+             </button>
             </ul>
           </div>
         </nav>

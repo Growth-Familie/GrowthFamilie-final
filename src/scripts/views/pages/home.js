@@ -69,15 +69,15 @@ const Home = {
 
       <!-- Card -->
       <div class="container mt-5">
-      <div class="articles-card position-relative">
+      <div class="articles-card position-relative m-3">
       <h2 class="text-center mx-4" id="read-articles">Dive into our latest articles and blog posts</h2>
       <div class="container text-center mt-3">
-      <a href="#/pregnancy" class="d-block d-sm-none btn category">View All</a>
+      <a href="#/pregnancy" class="d-block d-md-none btn category">View All</a>
       </div>
       <a href="#/pregnancy">
       <img src="./images/arrow.png" class="arrow position-absolute top-50 start-100 translate-middle">
       </a>
-        <div class="row row-cols-md-4 row-cols-sm-2 row-cols-xs-1 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4" id="articles">
+        <div class="row row-cols-lg-4 row-cols-md-2 row-cols-xs-1" id="articles">
         </div>
       </div>
 

@@ -19,7 +19,7 @@ const cardDetail = {
     <div class="py-4 mx-4">
         <h3 id="family" class="text-center">Family</h3>
 
-        <div class="row row-cols-md-4 row-cols-sm-2 row-cols-xs-1" id="articles">
+        <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 row-cols-xs-1" id="articles">
     </div>
 
     <div class="budgeting-wrapper container-fluid py-5 mt-5 text-center">

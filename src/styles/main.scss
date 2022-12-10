@@ -24,6 +24,10 @@ span {
   border-radius: 40px;
 }
 
+.avatar{
+  width: 50px;
+}
+
 .arrow {
   width: 75px;
 }
@@ -361,8 +365,17 @@ nav {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .arrow {
+    display: none;
+  }
+  .navbar-dashboard {
+    margin-left: 20px;
+  }
+  .avatar {
+    display: none;
+  }
+  .admin {
     display: none;
   }
 }

@@ -9,10 +9,12 @@ const LogoutInitiator = {
   },
 
   _clickButton() {
-    this._button.addEventListener('click', (event) => {
-      event.stopPropagation();
-      LocalStorageUtils.removeUserStorage();
-      RouteUtils.redirectToLogin();
+    this._button.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        event.stopPropagation();
+        LocalStorageUtils.removeUserStorage();
+        RouteUtils.redirectToLogin();
+      });
     });
   },
 };
