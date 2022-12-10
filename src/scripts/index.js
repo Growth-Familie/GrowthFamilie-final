@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 import * as boostrap from 'bootstrap';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import '../styles/main.scss';
 import 'regenerator-runtime';
 import App from './views/app';

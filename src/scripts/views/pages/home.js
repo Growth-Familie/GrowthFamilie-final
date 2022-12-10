@@ -1,10 +1,4 @@
-/* eslint-disable no-shadow */
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
 import GrowfieSrc from '../../data/growfie-src';
-import { createArticlesItemTemplate } from '../templates/templates-creator';
-
-const feather = require('feather-icons');
 
 const Home = {
   async render() {
@@ -20,7 +14,7 @@ const Home = {
               </div>
             </div>
             <div class="hero_image col">
-              <img src="./images/hero.svg" alt="hero picture">
+              <img class="lazyload" data-src="./images/hero.svg" alt="hero picture">
             </div>
         </div>
       </section>
@@ -36,22 +30,38 @@ const Home = {
         </div>
         <div class="carousel-inner mt-3">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="./images/img2.jpg" class="d-block w-100" alt="...">
+            <img
+              data-src="./images/img2.jpg"
+              class="d-block w-100 lazyload"
+              alt="Carousel 1"
+            >
             <div class="carousel-caption d-none d-md-block">
             </div>
           </div>
           <div class="carousel-item" data-bs-interval="2000">
-            <img src="./images/img3.jpg" class="d-block w-100" alt="...">
+            <img
+              data-src="./images/img3.jpg"
+              class="d-block w-100 lazyload"
+              alt="Carousel 2"
+            >
             <div class="carousel-caption d-none d-md-block">
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./images/img7.jpg" class="d-block w-100" alt="...">
+            <img
+              data-src="./images/img7.jpg"
+              class="d-block w-100 lazyload"
+              alt="Carousel 3"
+            >
             <div class="carousel-caption d-none d-md-block">
             </div>
           </div>  
           <div class="carousel-item">
-            <img src="./images/img5.jpg" class="d-block w-100" alt="...">
+            <img 
+              data-src="./images/img5.jpg"
+              class="d-block w-100 lazyload"
+              alt="Carousel 4"
+            >
             <div class="carousel-caption d-none d-md-block">
             </div>
           </div>
@@ -69,14 +79,14 @@ const Home = {
 
       <!-- Card -->
       <div class="container mt-5">
-      <div class="articles-card position-relative m-3">
-      <h2 class="text-center mx-4" id="read-articles">Dive into our latest articles and blog posts</h2>
-      <div class="container text-center mt-3">
-      <a href="#/pregnancy" class="d-block d-md-none btn category">View All</a>
-      </div>
-      <a href="#/pregnancy">
-      <img src="./images/arrow.png" class="arrow position-absolute top-50 start-100 translate-middle">
-      </a>
+        <div class="articles-card position-relative m-3">
+          <h2 class="text-center mx-4" id="read-articles">Dive into our latest articles and blog posts</h2>
+          <div class="container text-center mt-3">
+            <a href="#/pregnancy" class="d-block d-md-none btn category">View All</a>
+          </div>
+        <a href="#/pregnancy">
+          <img src="./images/arrow.png" class="arrow position-absolute top-50 start-100 translate-middle">
+        </a>
         <div class="row row-cols-lg-4 row-cols-md-2 row-cols-xs-1" id="articles">
         </div>
       </div>
@@ -84,10 +94,10 @@ const Home = {
       <!-- akhir Card -->
 
       <div class="shadow-lg p-3 mb-5 bg-body rounded d-flex justify-content-center align-items-center mt-5" style="min-height: 250px; width: 100%">
-      <h4>More you know about Growth Familie</h4>
-      <div class="d-flex justify-content-center align-items-center">
-        <a href="#/about" class="btn ms-3 ">About page</a>
-      </div>
+        <h4>More you know about Growth Familie</h4>
+        <div class="d-flex justify-content-center align-items-center">
+          <a href="#/about" class="btn ms-3 ">About page</a>
+        </div>
       </div>
     `;
   },
@@ -116,7 +126,7 @@ const Home = {
       articlesContainer.innerHTML += `
       <div class="mt-5">
         <div class="card box">
-          <img src="${article.img}" class="card-img-top">
+          <img data-src="${article.img}" class="card-img-top lazyload">
             <div class="card-body">
             <h5 class="card-title">${article.title}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${article.category}</h6>
