@@ -82,6 +82,13 @@ const Home = {
       </div>
 
       <!-- akhir Card -->
+
+      <div class="shadow-lg p-3 mb-5 bg-body rounded d-flex justify-content-center align-items-center mt-5" style="min-height: 250px; width: 100%">
+      <h4>More you know about Growth Familie</h4>
+      <div class="d-flex justify-content-center align-items-center">
+        <a href="#/about" class="btn ms-3 ">About page</a>
+      </div>
+      </div>
     `;
   },
 
