@@ -28,15 +28,19 @@ class App {
     const page = routes[url];
 
     if (RouteUtils.notCommonUrl(url)) {
+      const userStorage = LocalStorageUtils.getUserStorage();
+      const user = JSON.parse(userStorage);
+
+      if (!user) {
+        RouteUtils.redirectToLogin();
+      }
+
       if (url === '/login') {
         // Login page
         document.body.innerHTML = await page.render();
         await page.afterRender();
       } else {
         // Dashboard page
-        const userStorage = LocalStorageUtils.getUserStorage();
-        const user = JSON.parse(userStorage);
-
         document.body.innerHTML = '<div class="dashboard-wrapper"></div>';
         const dashboardWrapperElement = document.querySelector('.dashboard-wrapper');
         dashboardWrapperElement.innerHTML = createDashboardTemplate(user);

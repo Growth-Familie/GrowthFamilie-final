@@ -400,7 +400,7 @@ const createDashboardTemplate = (user) => {
 const createArticlesItemTemplate = (a) => `
     <div class="mt-5">
     <div class="card box">
-      <img src="${a.img}" class="card-img-top">
+      <img data-src="${a.img}" class="card-img-top lazyload">
         <div class="card-body">
         <h5 class="card-title">${a.title}</h5>
         <h6 class="card-subtitle mb-2 text-muted">${a.category}</h6>
@@ -431,8 +431,8 @@ const createArticleDetailTemplate = (article) => {
         </div>
       </div>
       <img
-        class="img-fluid my-3 article-img w-100 rounded"
-        src="${article.img}"
+        class="img-fluid my-3 article-img w-100 rounded lazyload"
+        data-src="${article.img}"
       />
       <p class="text-source">
         <b>Sumber:</b> <i>${article.from}</i>
